@@ -2,7 +2,7 @@ __author__ = "Jie Lei"
 
 import os
 import json
-import cPickle as pickle
+import  pickle
 
 
 def read_json_lines(file_path):
@@ -31,12 +31,12 @@ def load_json(file_path):
 
 
 def save_pickle(data, data_path):
-    with open(data_path, "w") as f:
+    with open(data_path, "wb") as f:
         pickle.dump(data, f)
 
 
 def load_pickle(file_path):
-    with open(file_path, "r") as f:
+    with open(file_path, "rb") as f:
         return pickle.load(f)
 
 

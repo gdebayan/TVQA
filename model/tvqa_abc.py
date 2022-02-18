@@ -2,10 +2,12 @@ __author__ = "Jie Lei"
 
 import torch
 from torch import nn
-
-from rnn import RNNEncoder, max_along_time
-from bidaf import BidafAttn
-from mlp import MLP
+# sys.path.insert9'.
+import os
+print('os curr dir', os.getcwd())
+from model.rnn import RNNEncoder, max_along_time
+from model.bidaf import BidafAttn
+from model.mlp import MLP
 
 
 class ABC(nn.Module):

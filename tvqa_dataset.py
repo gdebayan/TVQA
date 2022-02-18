@@ -235,7 +235,7 @@ def pad_collate(data):
         return padded_seqs, lengths
 
     # separate source and target sequences
-    column_data = zip(*data)
+    column_data = list(zip(*data))
     text_keys = ["q", "a0", "a1", "a2", "a3", "a4", "sub", "vcpt"]
     label_key = "answer_idx"
     qid_key = "qid"

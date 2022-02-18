@@ -29,12 +29,14 @@ tar -xzf det_visual_concepts_hq.pickle.tar.gz
 
 # external files
 echo -n "Do you wish to download GloVe pretrained word vectors (822MB) as well? (Y/N)"
-read answer
-if [ "$answer" != "${answer#[Yy]}" ] ;then
-    echo Yes
-    wget http://nlp.stanford.edu/data/glove.6B.zip -q --show-progress
-    unzip glove.6B.zip
-else
-    echo No
-fi
+# read answer
+wget http://nlp.stanford.edu/data/glove.6B.zip -q --show-progress
+unzip glove.6B.zip  
+# if [ "$answer" != "${answer#[Yy]}" ] ;then
+#     echo Yes
+#     wget http://nlp.stanford.edu/data/glove.6B.zip -q --show-progress
+#     unzip glove.6B.zip
+# else
+#     echo No
+# fi
 
